@@ -1,0 +1,67 @@
+@use 'barvy';
+
+.products__item--img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: solid 2px barvy.$primarni;
+}
+
+.products__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.products__item--grey{
+    background-color: barvy.$svetla;
+}
+
+.products__item--doplnkova{
+    background-color: barvy.$doplnkova;
+}
+
+.products__item p{
+    text-align: center;
+    padding: 10px;
+}
+
+h2{
+    margin: 40px;
+    text-align: center;
+}
+
+h2::after{
+	content:"";
+	display: block;
+	width: 80px;
+	height: 2px;
+	background-color: barvy.$primarni;
+    margin: auto;
+    margin-top: 10px;
+}
+
+@media screen and (min-width: 768px){
+    .products__item{
+        flex-direction: row;
+    }
+
+    .products__item--left{
+        padding: 20px;
+    }
+}
+
+@media screen and (min-width: 900px){
+    .products{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .products__item--grey{
+        border-bottom: solid 1px barvy.$doplnkova;
+    }
+    
+    .products__item--doplnkova{
+        border-bottom: solid 1px barvy.$svetla;
+    }
+}

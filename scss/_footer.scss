@@ -1,0 +1,21 @@
+@use 'barvy';
+
+
+.footer::before{
+	content:"";
+	display: block;
+	width: 50px;
+	height: 1px;
+	background-color: barvy.$doplnkova;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+
+.footer{
+    background-color: barvy.$svetla;
+    color: barvy.$doplnkova;
+    text-align: center;
+    padding: 20px 0;
+}
+

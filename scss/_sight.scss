@@ -1,0 +1,54 @@
+@use 'barvy';
+@use 'button';
+
+
+
+
+.sight__item-img {
+    height: 250px;
+    width: auto;
+    border: solid 2px barvy.$primarni;
+}
+
+@media screen and (max-width: 408px){
+    .sight__item-img {
+        height: 150px;
+        width: auto;
+    }
+}
+
+.sight__item{
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.sight__item--images{
+    flex-direction: row;   
+}
+
+.sight__item p{
+    text-align: center;
+}
+
+@media screen and (min-width: 768px){
+    .sight__item-img {
+        height: 300px;
+        width: auto;
+    }
+
+}
+
+@media screen and (min-width: 900px){
+    .sight__item-img {
+        height: 400px;
+        width: auto;
+    }
+
+    .sight__item--form{
+        background-color: barvy.$doplnkova;
+        margin-bottom: 0;
+        padding-bottom: 10px;
+    }
+}

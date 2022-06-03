@@ -1,0 +1,74 @@
+@use 'barvy';
+@use 'button';
+
+
+.form__item-img img{
+    height: 200px;
+    width: auto;
+	margin:auto;
+}
+
+.form {
+	width: 100%;
+	max-width: 300px;}
+
+.form-field{
+	margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.form-field input{
+	width: 100%;
+}
+
+.form-field label{
+	display: block;
+	font-size: 14px;
+	color: barvy.$tmava;
+}
+
+.required{
+	color: red;
+}
+
+.form{
+    margin-bottom: 10px;
+}
+
+.form-field button{
+	margin: auto;
+	border: solid 1px barvy.$seda;
+}
+
+@media screen and (min-width: 768px){
+    .form__item-img img{
+		height: 300px;
+	}
+
+	.form-field input{
+		width: auto;
+	}
+
+	.form{
+		display: grid;
+		grid: 2fr 1fr;
+		width: auto;
+		max-width: 1fr;
+	}
+
+	.form__item{
+		grid: span(1);
+	}
+
+	.form__item-contact{
+		grid:2/3;
+	}
+
+}
+
+@media screen and (min-width: 900px){
+    .form__item-img img{
+		height: 400px;
+	}
+	
+}

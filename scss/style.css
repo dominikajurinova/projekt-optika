@@ -1,0 +1,97 @@
+@charset "UTF-8";
+/* SCSS HEX */
+html {
+  box-sizing: border-box;
+}
+
+*, ::before, ::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Georgia, serif;
+  margin: 0 auto;
+  max-width: 50em;
+  line-height: 1.5;
+  padding: 4em 1em;
+}
+
+h1, h2, h3 {
+  color: #ec7c2c;
+  font-family: "Gill Sans MT", sans-serif;
+}
+
+h1 {
+  font-size: 35px;
+  background-color: blue;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.menu__checkbox {
+  position: absolute;
+  left: -9999px;
+}
+
+.menu__toggler {
+  cursor: pointer;
+}
+
+.menu__list {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: green;
+}
+
+.menu__item {
+  border-bottom: 1px solid white;
+}
+
+.menu__link {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+}
+
+.menu__link:hover {
+  background-color: rgb(114, 24, 8);
+}
+
+.menu__checkbox:checked ~ .menu__list {
+  display: block;
+}
+
+@media screen and (min-width: 800px) {
+  .menu__toggler {
+    display: none;
+  }
+
+  .menu__list {
+    display: flex !important;
+  }
+
+  /* !important, aby to přebilo specifickejší selektor .menu__checkbox:checked ~ .menu__list,
+  ale netřeba to používat často, v tomto případě je to ale vhodné
+
+  případně další varianta, možná čistejší je použití media query na to
+  zaškrtnuté menu a nastavit tam mx-width: 799px;*/
+  .menu__item {
+    border-right: 1px solid white;
+    border-bottom: 0;
+  }
+}
+.text {
+  background-color: aquamarine;
+}
+
+.main__image img {
+  width: auto;
+  height: 200px;
+}/*# sourceMappingURL=style.css.map */

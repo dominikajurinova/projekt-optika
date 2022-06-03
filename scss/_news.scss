@@ -1,0 +1,66 @@
+@use 'barvy';
+
+.news__item-img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: solid 2px barvy.$primarni;
+}
+
+.news__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.news__item--grey{
+    background-color: barvy.$svetla;
+}
+
+.news__item--doplnkova{
+    background-color: barvy.$doplnkova;
+}
+
+.news__item p{
+    text-align: center;
+    padding: 10px;
+}
+
+h3{
+    text-align: center;
+}
+
+@media screen and (min-width: 768px){
+    .news__item{
+        flex-direction: row;
+    }
+
+    .news__item--left{
+        padding: 20px;
+    }
+
+}
+
+@media screen and (min-width: 900px){
+    .news{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .news__item--grey{
+        border-bottom: solid 1px barvy.$doplnkova;
+    }
+    
+    .news__item{
+        flex-direction: column;
+    }
+
+    .news__item--left{
+        padding: 0;
+    }
+
+    .news__item-img{
+        margin: auto;
+    }
+}
+

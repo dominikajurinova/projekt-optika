@@ -1,0 +1,49 @@
+---
+layout: hlavni-sablona.njk
+title: Formulár
+---
+
+<div class="breadcrumb-nav">
+    <p>
+        <a href="/">Úvod</a>
+        -> 
+        <a href="/meranie-zraku/">Meranie zraku</a>
+        ->
+        <a href="/formular/">Formulár</a>
+    </p>
+</div>
+<div class="form">
+    <div class="form__item form__item-img">
+        <img src="/images/meranie-zraku3.jpg " alt="meranie-zraku3">
+    </div>
+    
+    <div class="form__item form__item-contact">
+    
+        <h2>Kontaktný formulár</h2>
+    
+        <form action="" method="post">
+    
+            <div class="form-field">
+                <label for="meno" class="required">Meno a priezvisko*</label>
+                <input type="text" name="meno" id="meno" required>
+            </div>
+    
+            <div class="form-field">
+                <label for="email" class="required">E-mail*</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+    
+            <div class="form-field">
+                <label for="telefon" class="required">Telefón*</label>
+                <input type="tel" name="telefon" id="telefon">
+            </div>
+    
+            <div class="form-field">
+                <label for="zprava" class="required">Zpráva</label>
+                <textarea name="zprava" id="zprava" rows="6" required></textarea>
+            </div>
+    
+            <button class="button" type="submit">Odoslať</button>
+    
+        </form>
+</div>

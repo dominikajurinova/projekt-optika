@@ -1,17 +1,86 @@
 @use 'barvy';
+@use 'zaklad';
 
-.contact__item{
+.contact{
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     align-items: center;
-    background-color: barvy.$svetla;
 }
 
-.contact__item-photo img{
-    height: 200px;
+.contact__item-photo{
+    height: auto;
     width: 100%;
+    border: solid 2px barvy.$primarni;
+}
+
+.contact__flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
 }
 
 h3{
-    color: aquamarine;
+    margin: 0;
+}
+
+.contact i{
+    font-size: 25px;
+    color: barvy.$primarni;
+}
+
+.contact p{
+    text-align: center;
+}
+
+.contact__item-detail{
+    padding: 15px;
+    background-color: barvy.$doplnkova;
+    border-bottom: solid 1px barvy.$primarni;
+}
+
+.contact__item-img{
+    height: auto;
+    width: 100%; 
+    border: solid 2px barvy.$primarni;
+}
+
+@media screen and (min-width: 768px){
+    .contact{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(100px, 3fr));
+        grid-template-rows: 1fr 1fr; 
+    }
+
+    .contact__item{
+        width:100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .contact__item-first{
+        grid-column: 1/2;
+       grid-row: 1/2;
+    }
+
+    .contact__item-img{
+        grid-column: 2/-1;
+        grid-row: 1/2;
+    }
+
+    .contact__item-photo1{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+    .contact__item-photo2{
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+
+}
+
+@media screen and (min-width: 900px){
+
 }
